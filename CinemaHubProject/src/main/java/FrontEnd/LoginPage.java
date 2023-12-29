@@ -161,13 +161,16 @@ public class LoginPage extends javax.swing.JFrame {
         if (logininfo.containsKey(username)) {
             if (logininfo.get(username).getPassword().equals(password)) {
                 jLabel3.setForeground(Color.green);
+            }else{
+                jLabel3.setText("Wrong user name or password, Please try again");
+                jLabel3.setForeground(Color.red);
+                jTextField1.setText("");
+                jPasswordField1.setText("");
+                
             }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     
     public void settings(){
         /* Set the Nimbus look and feel */
