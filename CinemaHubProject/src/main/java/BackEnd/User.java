@@ -80,12 +80,10 @@ public class User implements Serializable {
 
     @Override
     public String toString() {
-        return "{" +
-            " username='" + getUsername() + "'" +
-            ", password='" + getPassword() + "'" +
-            ", tickets='" + getTickets() + "'" +
-            "}";
+        return "User{" + "username=" + username + ", password=" + password + ", bankAccId=" + bankAccId + ", balance=" + balance + ", tickets=" + tickets + '}';
     }
+
+    
 
     
 }

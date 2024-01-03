@@ -1,15 +1,21 @@
 package BackEnd;
 
+import java.io.Serializable;
 
-public class Ticket {
+
+public class Ticket implements Serializable {
     String forWichMovie;
     String ID;
+    String seatNumber;
+    Date date;
     int price;
 
 
-    public Ticket(String forWhichMovie, String ID, int price) {
+    public Ticket(String forWhichMovie, String ID,String seatNumber,Date date, int price) {
         this.forWichMovie = forWhichMovie;
         this.ID = ID;
+        this.seatNumber = seatNumber;
+        this.date = date;
         this.price = price;
     }
 
@@ -45,15 +51,15 @@ public class Ticket {
     public void setPrice(int price) {
         this.price = price;
     }
-
-
-    @Override
-    public String toString() {
-        return "{" +
-            " forWichMovie='" + getForWhichMovie() + "'" +
-            ", ID='" + getID() + "'" +
-            ", price='" + getPrice() + "'" +
-            "}";
+    public String getSeatNumber() {
+        return this.seatNumber;
     }
-    
+
+    public void setSeatNumber(String seatNumber) {
+        this.seatNumber = seatNumber;
+    }
+    public String getDate(){
+        return date.toString();
+    }
+
 }
